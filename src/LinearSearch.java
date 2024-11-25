@@ -10,19 +10,17 @@ public class LinearSearch {
        System.out.println(Arrays.toString(ans2));
     }
     static int[] search2(int[] arr, int target){
-        int[] res = {-1,-1}; // initial nothing
+
         if(arr.length == 0 ){
-            return res;
+            return new int[]{-1,-1};
         }
 
         for(int i =0 ;i<arr.length;i++){
             if(target == arr[i]){
-               res[0] = i;
-               res[1] = target;
-               return res;
+              return new int[]{i,target};
             }
         }
-        return res;
+        return new int[]{-1,-1};
 
 
     }
